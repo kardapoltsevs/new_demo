@@ -12,13 +12,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static com.example.new_demo.model.User.*;
-@Builder
+
 @Service
 @RequiredArgsConstructor
 public class UserService {
     private final UserRepository userRepository;
     private final UserService userService;
-    @Builder
+
     @Transactional
     public UserDto createUser(UserDto userDto) {
         User user = User.builder()
